@@ -1,0 +1,20 @@
+.square {
+    width: 30%;
+    background-color: gray;
+    height: 8rem;
+    float: left;
+    transition: background 150ms;
+    -webkit-transition: background 150ms;
+    -moz-transition: background 150ms;
+    border: 2px solid purple;
+    font-size: 100px;
+    text-align: center;
+    
+}
+
+#container {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+
