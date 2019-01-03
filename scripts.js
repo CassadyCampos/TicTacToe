@@ -1,5 +1,6 @@
 var currentTurn;
 var displayMsg = document.querySelector("#display");
+var turnMsg = document.querySelector("#turn");
 var squares = document.querySelectorAll(".square") ;
 var resetBtn = document.querySelector("#reset");
 
@@ -11,8 +12,11 @@ playGame();
 function switchTurn() {
     if (currentTurn === "Player1") {
         currentTurn = "Player2";
+        turnMsg.textContent = "Turn: Player2";
+
     } else {
         currentTurn = "Player1";
+        turnMsg.textContent = "Turn: Player1";
     }
 };
 
@@ -21,6 +25,7 @@ function init() {
         squares[i].setAttribute("selected", "false");
     }
     currentTurn = "Player1";
+    turnMsg.textContent =  "Turn: Player1";
 };
 
 
@@ -55,7 +60,18 @@ function reset() {
         squares[i].setAttribute("selected", "false");
     }
     displayMsg.textContent = null;
+    resetBtn.textContent = "Restart"
 };
+
+function gameOver() {
+    for (var i = 0; i < squares.length; i++) {
+        if (squares[i].getAttribute("selected") === "false") {
+            squares[i].setAttribute("selected", "true");
+        }
+    }
+    resetBtn.textContent = "Play Again?";
+};
+
 function checkWin() {
     if (currentTurn === "Player1") {
         checkWin1("X");
@@ -96,7 +112,7 @@ function checkWin2(pSymbol) {
             gameOver();
         }
     return false;
-}
+};
 
 function checkWin3(pSymbol) {
     if (squares[6].textContent === pSymbol &&
@@ -106,7 +122,7 @@ function checkWin3(pSymbol) {
             gameOver();
         }
     return false;
-}
+};
 
 function checkWin4(pSymbol) {
     if (squares[0].textContent === pSymbol &&
@@ -116,7 +132,7 @@ function checkWin4(pSymbol) {
             gameOver();
         }
     return false;
-}
+};
 
 function checkWin5(pSymbol) {
     if (squares[1].textContent === pSymbol &&
@@ -126,7 +142,7 @@ function checkWin5(pSymbol) {
             gameOver();
         }
     return false;
-}
+};
 
 function checkWin5(pSymbol) {
     if (squares[1].textContent === pSymbol &&
@@ -136,7 +152,7 @@ function checkWin5(pSymbol) {
             gameOver();
         }
     return false;
-}
+};
 
 function checkWin6(pSymbol) {
     if (squares[2].textContent === pSymbol &&
@@ -146,7 +162,7 @@ function checkWin6(pSymbol) {
             gameOver();
         }
     return false;
-}
+};
 
 function checkWin7(pSymbol) {
     if (squares[0].textContent === pSymbol &&
@@ -156,7 +172,7 @@ function checkWin7(pSymbol) {
             gameOver();
         }
     return false;
-}
+};
 
 function checkWin8(pSymbol) {
     if (squares[2].textContent === pSymbol &&
@@ -166,12 +182,4 @@ function checkWin8(pSymbol) {
             gameOver();
         }
     return false;
-}
-
-function gameOver() {
-    for (var i = 0; i < squares.length; i++) {
-        if (squares[i].getAttribute("selected") === "false") {
-            squares[i].setAttribute("selected", "true");
-        }
-    }
 };

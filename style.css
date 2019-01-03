@@ -1,3 +1,9 @@
+body {
+    background-color: #2b2d2c;
+    margin: 0;
+    font-family: "Monsterrat", "Avenir";
+    color: black;
+}
 .square {
     width: 30%;
     background-color: gray;
@@ -17,4 +23,15 @@
     max-width: 600px;
 }
 
+#stripe {
+    background-color: white;
+    height: 30px; 
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#turn {
+    width: 30%;
+    margin: 0;
+}
 
