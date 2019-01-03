@@ -39,13 +39,13 @@ function playGame() {
                     var setX = document.createTextNode("X");
                     this.appendChild(setX);
                     this.setAttribute("selected", "true");  
-                    switchTurn(); 
                 } else {
                     var setO = document.createTextNode("O");
                     this.appendChild(setO);
                     this.setAttribute("selected", "true");   
-                    switchTurn();
                 }
+                checkWin();
+                switchTurn();
             }
         });
     }
