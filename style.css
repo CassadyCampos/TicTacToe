@@ -18,6 +18,18 @@ body {
     
 }
 
+h1 {
+    color: white;
+    line-height: 1.1;
+    font-weight: normal;
+    text-align: center;
+    background-color: green;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 20px 0;
+
+} 
+
 #container {
     margin: 20px auto;
     max-width: 600px;
@@ -30,8 +42,23 @@ body {
     text-transform: uppercase;
 }
 
-#turn {
-    width: 30%;
-    margin: 0;
+#display {
+    display: inline-block;
+    width: 25%;
 }
 
+button {
+    border: none;
+    text-transform: uppercase;
+    height: 100%; 
+    font-weight: 700;
+    color: green;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 300ms;
+}
+
+button:hover {
+    color: white;
+    background-color: green;
+}
