@@ -1,8 +1,12 @@
 body {
     background-color: #2b2d2c;
     margin: 0;
-    font-family: "Monsterrat", "Avenir";
+    font-family: "Righteous", cursive;
     color: black;
+}
+
+hr {
+    border: 1px solid white;
 }
 .square {
     width: 30%;
@@ -31,7 +35,7 @@ h1 {
 } 
 
 #container {
-    margin: 20px auto;
+    margin: 30px auto;
     max-width: 600px;
 }
 
@@ -45,6 +49,7 @@ h1 {
 #display {
     display: inline-block;
     width: 25%;
+    background-color:green;
 }
 
 button {
@@ -53,6 +58,7 @@ button {
     height: 100%; 
     font-weight: 700;
     color: green;
+    background-color: white;
     letter-spacing: 1px;
     font-size: inherit;
     transition: all 300ms;
@@ -61,4 +67,8 @@ button {
 button:hover {
     color: white;
     background-color: green;
+}
+
+#instructions {
+    margin-top: 425px;
 }
