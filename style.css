@@ -8,6 +8,7 @@ body {
 hr {
     border: 1px solid white;
 }
+
 .square {
     width: 30%;
     background-color: gray;
@@ -19,7 +20,8 @@ hr {
     border: 2px solid purple;
     font-size: 100px;
     text-align: center;
-    
+    line-height: 1.25;
+
 }
 
 h1 {

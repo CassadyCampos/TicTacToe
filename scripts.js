@@ -4,9 +4,6 @@ var turnMsg = document.querySelector("#turn");
 var squares = document.querySelectorAll(".square") ;
 var resetBtn = document.querySelector("#reset");
 
-//* Recall to calculate indices in row-major matrix 
-//* we do index = X+Y * Width
-
 playGame();
 
 function switchTurn() {
@@ -45,9 +42,9 @@ function playGame() {
                     this.appendChild(setO);
                     this.setAttribute("selected", "true");   
                 }
+                checkDraw();
                 checkWin();
                 switchTurn();
-                checkDraw();
             }
         });
     }
@@ -83,6 +80,7 @@ function checkWin() {
         checkWin6("X");
         checkWin7("X");
         checkWin8("X");
+        
     } else {
         checkWin1("O");
         checkWin2("O");
@@ -92,6 +90,7 @@ function checkWin() {
         checkWin6("O");
         checkWin7("O");
         checkWin8("O");
+
     }
 };
 
