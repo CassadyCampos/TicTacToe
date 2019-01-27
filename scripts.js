@@ -47,6 +47,7 @@ function playGame() {
                 }
                 checkWin();
                 switchTurn();
+                checkDraw();
             }
         });
     }
@@ -181,5 +182,19 @@ function checkWin8(pSymbol) {
             displayMsg.textContent = currentTurn + " has won!";
             gameOver();
         }
+    return false;
+};
+
+function checkDraw() {
+    var count = 0;
+    for (var i = 0; i < squares.length; i++) {
+        if (squares[i].getAttribute("selected") === "true") {
+            count += 1;
+        }
+
+    }
+    if (count === 9) {
+        displayMsg.textContent = "Draw!";
+    }
     return false;
 };
